@@ -56,8 +56,9 @@ class StateTimeCog(commands.Cog):
                 await last_message.edit(content=message)
             except Exception:
                 await channel.send(message)
-            await asyncio.sleep(10) # 60 seconds
+            await asyncio.sleep(60) # 60 seconds
 
 
 def setup(bot):
+    print("Setting up StateTimeCog...")
     bot.add_cog(StateTimeCog(bot))
